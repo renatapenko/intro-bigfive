@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Antes do Teste — Sessão Pocket</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--terra:#B5623A;--bg:#F5F0EA;--w:#FFF;--t:#111110;--t2:#3A3A34;--t3:#77776A;--g2:#D8D5CC}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--t);font-family:'Jost',sans-serif;font-weight:300;line-height:1.9;overflow-x:hidden}
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:80px 24px;background:var(--w);position:relative}
+.hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#8B35B8,#C87010,#229958,#B83258,#2450B8)}
+.tag{font-size:10px;letter-spacing:5px;text-transform:uppercase;color:var(--t3);margin-bottom:32px}
+.hero-h{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,7vw,72px);font-weight:300;line-height:1.05;margin-bottom:24px}
+.hero-h em{font-style:italic;color:var(--terra)}
+.hero-sub{font-family:'Cormorant Garamond',serif;font-size:clamp(15px,2.2vw,20px);font-style:italic;color:var(--t2);max-width:520px;line-height:1.7;margin-bottom:20px}
+.hero-body{font-size:14px;color:var(--t3);max-width:460px;line-height:1.9}
+.secao{max-width:680px;margin:0 auto;padding:80px 24px}
+.secao-tag{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--terra);margin-bottom:20px}
+.secao-h{font-family:'Cormorant Garamond',serif;font-size:clamp(26px,4vw,42px);font-weight:300;line-height:1.15;margin-bottom:32px}
+.secao-h em{font-style:italic;color:var(--terra)}
+.corpo{font-size:15px;color:var(--t2);line-height:2}
+@media(max-width:560px){.corpo{font-size:16px;line-height:1.95}}
+.corpo p{margin-bottom:20px}
+.corpo p:last-child{margin-bottom:0}
+.corpo strong{color:var(--t);font-weight:500}
+.destaque{background:var(--w);border-left:4px solid var(--terra);padding:22px 24px;border-radius:0 8px 8px 0;margin:32px 0;font-family:'Cormorant Garamond',serif;font-size:clamp(18px,2.5vw,22px);font-style:italic;color:#111110;line-height:1.65}
+.lista{list-style:none;margin:16px 0 24px;display:flex;flex-direction:column;gap:10px}
+.lista li{display:flex;align-items:flex-start;gap:12px;font-size:15px;color:var(--t2);line-height:1.8}
+.lista li::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--terra);flex-shrink:0;margin-top:10px}
+.divisor{border-top:1px solid var(--g2);max-width:680px;margin:0 auto}
+.cap-num{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--t3);margin-bottom:8px}
+.cap-h{font-family:'Cormorant Garamond',serif;font-size:clamp(22px,3.5vw,36px);font-weight:300;line-height:1.2;margin-bottom:28px}
+.cap-h em{font-style:italic;color:var(--terra)}
+.cta-wrap{background:var(--w);border-top:1px solid var(--g2);padding:80px 24px;text-align:center}
+.cta-h{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,4.5vw,50px);font-weight:300;line-height:1.1;margin-bottom:20px}
+.cta-h em{font-style:italic;color:var(--terra)}
+.cta-destaque{font-family:'Cormorant Garamond',serif;font-size:clamp(16px,2.2vw,20px);font-style:italic;color:var(--t2);max-width:540px;margin:0 auto 36px;line-height:1.75}
+.cta-btn{display:inline-block;background:var(--t);color:#fff;text-decoration:none;padding:16px 48px;border-radius:8px;font-family:'Jost',sans-serif;font-size:12px;font-weight:500;letter-spacing:2px;text-transform:uppercase;transition:all .25s}
+.cta-btn:hover{background:#333;transform:translateY(-2px)}
+.cta-note{font-size:11px;color:var(--t3);margin-top:14px}
+.fade{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.fade.vis{opacity:1;transform:none}
+@media(max-width:560px){
+  .secao{padding:52px 20px}
+  .cta-wrap{padding:52px 20px}
+  .hero{padding:60px 20px}
+  .hero-sub{font-size:17px}
+  .hero-body{font-size:15px;color:var(--t2)}
+  .destaque{padding:18px 18px;font-size:18px}
+  .cap-h{margin-bottom:22px}
+  .secao-h{margin-bottom:24px}
+}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <p class="tag">Sessão Pocket · Primeiro Pilar</p>
+  <h1 class="hero-h">Você tem tentado<br>mudar a pessoa<br><em>errada.</em></h1>
+  <p class="hero-sub">Você já tentou de tudo. Curso, terapia, podcast, diário, metas, rotina. E algo sempre volta ao mesmo lugar.</p>
+  <p class="hero-body">Não porque você não se esforça. Porque ninguém nunca te mostrou como você realmente funciona por dentro. É isso que o Big Five faz.</p>
+</div>
+
+<div class="secao fade">
+  <p class="secao-tag">A base</p>
+  <h2 class="secao-h">Muitas pessoas passam a vida inteira tentando mudar…<br>sem nunca terem entendido<br><em>como funcionam.</em></h2>
+  <div class="corpo">
+    <p>E quando você não entende sua estrutura emocional, você se culpa por padrões que precisavam de estratégia, não de culpa.</p>
+    <p>Você se chama de frágil quando na verdade tem um sistema nervoso extremamente sensível. Você se chama de irresponsável quando na verdade tem uma mente que odeia repetição. Você se chama de egoísta quando finalmente coloca um limite — porque durante anos aprendeu que cuidar dos outros era o único jeito de ser amada.</p>
+    <p>O Big Five é hoje o modelo de personalidade mais utilizado na ciência contemporânea para entender comportamento humano. Ele mede cinco grandes traços:</p>
+  </div>
+  <ul class="lista">
+    <li>Neuroticismo — como você lida com emoções difíceis, estresse e ameaças internas</li>
+    <li>Extroversão — de onde você tira energia e como se relaciona com o mundo</li>
+    <li>Abertura — sua curiosidade, criatividade e relação com o novo</li>
+    <li>Amabilidade — como você se coloca — ou se apaga — nos relacionamentos</li>
+    <li>Conscienciosidade — sua relação com disciplina, padrão, entrega e descanso</li>
+  </ul>
+  <div class="corpo">
+    <p>Esses traços influenciam como você trabalha, como ama, como reage ao estresse, como procrastina, como cria hábitos, como lidera, como se relaciona — e até como se sabota.</p>
+    <p>Mas o Big Five sozinho não transforma ninguém.</p>
+  </div>
+  <div class="destaque">“Consciência sem intervenção continua sendo sofrimento explicado. O teste mostra os traços. Mas a sessão mostra a lógica emocional por trás deles — quem você se tornou para sobreviver, e o que precisa mudar para finalmente viver.”</div>
+</div>
+
+<div class="divisor"></div>
+
+<div class="secao fade">
+  <p class="cap-num">Capítulo 01</p>
+  <h2 class="cap-h">Você não é<br><em>preguiçosa.</em></h2>
+  <div class="corpo">
+    <p>Às vezes a pessoa acha que o problema dela é preguiça. Quando na verdade ela vive emocionalmente esgotada — e o corpo simplesmente parou de colaborar.</p>
+    <p>Ela toma remédio atrás de remédio. Faz curso atrás de curso. Se cobra o tempo inteiro. Mas ninguém nunca explicou que talvez ela tenha uma vulnerabilidade ao estresse extremamente alta. Que o sistema nervoso dela vive em ameaça constante — mesmo quando não há nada de errado acontecendo.</p>
+    <p>Ela antecipa crítica antes da crítica existir. Antecipa abandono antes de alguém ir embora. Antecipa fracasso antes de tentar. O corpo nunca descansa. A mente nunca desliga. E ela acorda cansada de um sono que não restaurou nada.</p>
+  </div>
+  <div class="destaque">“Às vezes o problema não é falta de força. É excesso de ameaça interna. O sistema nervoso dela não está exagerando. Ele está fazendo exatamente o que foi treinado para fazer.”</div>
+  <div class="corpo">
+    <p>Tem mulheres extremamente inteligentes que nunca conseguem sustentar constância. Elas começam animadas — compram o domínio, criam o projeto, mudam a bio, querem revolucionar a vida. E duas semanas depois… sumiram. Aí elas se chamam de preguiçosas. Indisciplinadas. Fracassadas.</p>
+    <p>Mas quando eu olho o perfil, normalmente existe <strong>abertura muito alta, muitas ideias, muita imaginação, muita busca por novidade — e pouca sustentação comportamental.</strong> O cérebro delas é viciado em novidade. A dopamina vem do começo, não da continuação. E ninguém nunca explicou isso para elas.</p>
+    <p>Então a intervenção não é motivação. Ela já tem motivação demais. A intervenção é estrutura leve, micro metas, menos projetos simultâneos, ritual de execução. Menos dopamina de novidade. Mais tolerância à repetição.</p>
+    <p>Porque ela não precisa aprender a sonhar. <strong>Ela precisa aprender a permanecer.</strong></p>
+  </div>
+</div>
+
+<div class="divisor"></div>
+
+<div class="secao fade">
+  <p class="cap-num">Capítulo 02</p>
+  <h2 class="cap-h">O traço bom que está<br><em>destruindo sua vida.</em></h2>
+  <div class="corpo">
+    <p>Tem mulheres extremamente boazinhas que vivem se abandonando. Pensam em todo mundo antes delas mesmas. Sentem culpa quando se priorizam. Não conseguem colocar limite. Aceitam relações ruins para evitar conflito. Ficam com pessoas que não merecem porque rompimento parece cruel demais.</p>
+    <p>E o mais perigoso: o mundo elogia isso. Chama de coração bom. Chama de amor. Chama de generosidade.</p>
+    <p>Quando muitas vezes é uma <strong>amabilidade tão alta que a pessoa desapareceu de si mesma.</strong> Ela não sabe mais o que quer porque passou anos inteiros priorizando o que os outros precisavam. Ela sente culpa quando diz não. Sente que é demais quando pede. Sente que incomoda quando tem necessidade.</p>
+    <p>Então a intervenção não é ensinar empatia. Ela já tem empatia demais. A intervenção é limite, posicionamento, auto prioridade, micro confrontos — e tolerância à desaprovação. Porque para ela, desagradar alguém é quase físicamente doloroso.</p>
+  </div>
+  <div class="destaque">“Gente boazinha demais costuma pagar a conta emocional de todo mundo. E quando finalmente para — sente que é ela quem está errada.”</div>
+  <div class="corpo">
+    <p>Do outro lado, tem gente que não consegue descansar sem culpa. Senta no sofá e sente que deveria estar produzindo. Tira férias e fica ansiosa. Chega num final de semana livre e logo cria um projeto, uma meta, uma lista.</p>
+    <p>Porque existe uma conscienciosidade tão elevada que <strong>produtividade virou identidade.</strong> A pessoa acredita — no nível mais profundo — que só merece valor quando está entregando. Só merece descanso depois de produzir. Só merece existir quando está sendo útil.</p>
+    <p>E vive corrigindo, controlando, otimizando, perfeccionando, tentando prever tudo — porque o erro parece uma ameaça à sua existência, não só ao projeto.</p>
+    <p>Então a intervenção não é ensinar produtividade. Ela já sabe produzir. A intervenção é flexibilidade, presença, imperfeito seguro, redução de rigidez — e reconexão com o prazer de simplesmente existir.</p>
+    <p>Porque <strong>eficiência sem vida também é sofrimento.</strong></p>
+  </div>
+  <div class="destaque">“Não existe traço perfeito. Todo traço tem força e sombra. Às vezes o que está destruindo a vida da pessoa não é um traço ruim. É um traço bom em excesso — sem limite, sem consciência, sem estratégia.”</div>
+</div>
+
+<div class="divisor"></div>
+
+<div class="secao fade">
+  <p class="cap-num">Capítulo 03</p>
+  <h2 class="cap-h">Quem você precisou se tornar<br><em>para ser amada.</em></h2>
+  <div class="corpo">
+    <p>O Big Five não fala só sobre comportamento. Ele também ajuda a entender identidade relacional. Quem você aprendeu que precisava ser para ser amada, aceita, validada, necessária ou segura.</p>
+    <p>Porque a personalidade não se forma no vácuo. Ela se forma em relação. Em resposta. Em adaptação. E o que parece hoje um “jeito de ser” — muitas vezes é uma estratégia de sobrevivência emocional que você criou quando era pequena e nunca mais revisou.</p>
+  </div>
+  <ul class="lista">
+    <li>Alta amabilidade pode criar a identidade da “salvadora” — a mulher que resolve tudo, que acolhe todo mundo, que aguenta mais do que deveria e raramente pede. Porque aprendeu cedo que ser útil era a condição para ser amada.</li>
+    <li>Alta conscienciosidade pode criar identidade baseada em performance. A pessoa só se sente digna quando está entregando. O descanso é recompensa, nunca direito.</li>
+    <li>Neuroticismo elevado pode gerar hipervigilância constante — lendo sinais, antecipando rejeição, tentando não errar, tentando não ser abandonada. O amor se torna um campo minado.</li>
+    <li>Extroversão muito alta pode fazer a pessoa construir identidade baseada em pertencimento e aprovação social. Ela vive ocupada, cercada de gente, sempre em movimento — porque o silêncio a obriga a entrar em contato consigo mesma.</li>
+    <li>Abertura muito alta pode gerar a sensação de nunca ser completamente compreendida. Ela é complexa demais para a maioria. E aprende a esconder partes de si para caber nos lugares.</li>
+  </ul>
+  <div class="destaque">“Talvez a pergunta mais importante não seja: quem eu sou? Talvez seja: quem eu precisei me tornar para receber amor, pertencimento, segurança ou validação emocional? E essa pessoa que eu me tornei — ainda faz sentido para a vida que eu quero construir?”</div>
+</div>
+
+<div class="divisor"></div>
+
+<div class="secao fade">
+  <p class="cap-num">Capítulo 04</p>
+  <h2 class="cap-h">Por que eu uso o Big Five<br><em>nas sessões.</em></h2>
+  <div class="corpo">
+    <p>Eu não trabalho olhando só o comportamento visível. Eu trabalho entendendo o que está por trás dele. A lógica emocional. A identidade construída. O que a pessoa precisou se tornar para sobreviver.</p>
+    <p>Porque pessoas diferentes precisam de estratégias radicalmente diferentes — e dar a mesma solução para perfis opostos é uma das maiores falhas do mercado de desenvolvimento pessoal.</p>
+  </div>
+  <ul class="lista">
+    <li>Uma pessoa com neuroticismo elevado não precisa de mais cobrança. Ela já se cobra demais. Ela precisa aprender segurança interna e regulação emocional.</li>
+    <li>Uma mulher com amabilidade muito alta não precisa aprender a amar mais. Ela já ama demais. Ela precisa aprender limite e auto prioridade.</li>
+    <li>Uma pessoa introvertida não precisa virar extrovertida. Ela precisa construir uma vida compatível com a forma como a energia dela funciona.</li>
+    <li>Uma pessoa com abertura muito alta não precisa de mais inspiração. Ela precisa de estrutura e permanência.</li>
+  </ul>
+  <div class="corpo">
+    <p>Então eu uso o Big Five para personalizar o processo de transformação. Eu identifico o que precisa ser fortalecido, o que é excesso, o que é defesa emocional, o que é compensação — e quais comportamentos precisam ser treinados para sustentar a vida que você quer construir.</p>
+  </div>
+  <div class="destaque">“Quando você tenta mudar sem entender sua estrutura, você se culpa. Mas quando entende sua estrutura, você cria estratégia. Estratégia muda comportamento. Comportamento muda resultado. Resultado muda identidade.”</div>
+  <div class="corpo">
+    <p>O Big Five não serve para colocar você em uma caixa.</p>
+    <p><strong>Serve para mostrar as réguas invisíveis que estão conduzindo sua vida hoje — para que você possa finalmente escolher outras.</strong></p>
+  </div>
+</div>
+
+<div class="cta-wrap fade">
+  <h2 class="cta-h">Agora você está<br><em>pronta.</em></h2>
+  <p class="cta-destaque">“Esse teste não vai te colocar numa caixa. Vai te mostrar a caixa que você já está — e que ninguém nunca nomeou.”</p>
+  <a class="cta-btn" href="https://renatapenko.github.io/BIG-FIVE-POCKET-SESSION/" target="_blank">Fazer meu diagnóstico</a>
+  <p class="cta-note">60 afirmações · aproximadamente 15 minutos</p>
+</div>
+
+<script>
+var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting)e.target.classList.add('vis');});},{threshold:0.15});
+document.querySelectorAll('.fade').forEach(function(el){obs.observe(el);});
+</script>
+</body>
+</html>
